@@ -1,0 +1,259 @@
+<HTML>
+<HEAD>
+
+	<script src="./js/angular.min.js">
+	</script>
+	<script src="./js/angularuirouter.js"></script>
+	<script src="./js/ngcookies.js"></script>
+	<script type="text/javascript" src="./scripts/app.js"></script>
+	<script type="text/javascript" src="./scripts/services/mainservice.js"></script>
+	<script type="text/javascript" src="./scripts/controllers/homecontroller.js"></script>
+	<script type="text/javascript" src="./scripts/controllers/usercontrollers.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="./js/java.css"/>
+	<link rel="stylesheet" type="text/css" href="./js/facss.css"/>
+	<link rel="stylesheet" type="text/css" href="./js/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="./js/homepage.css"/>
+</HEAD>
+<body ng-app="banking">
+
+<div ng-controller="Homecontrollers as hctrl">
+
+<div class="new_stuff three_wrapper">
+
+	<div class="new_stuff three_block three_header">
+		<div class="three_two">
+			<a class="three_logo" alt="365 Cycles bike cycling parts and accessories" href="citilogo">
+				<img src="./images/citilogo.png" />
+			</a>
+		</div>
+		<div class="three_two">
+			<div class="phone"><div style="color: black;font-size: 19 "><b><div class="actionMenu deactivated" ng-model="hctrl.Username" ng-if="hctrl.checkUsername()">Welcome {{hctrl.Username}}
+			</div></b> </div>
+				<div style="color: black;font-size: 19 "><b><div class="actionMenu deactivated" ng-model="hctrl.Username" ng-if="!hctrl.checkUsername()">Welcome to my Site
+				</div></b> </div></div>
+			<!--
+				<form id="x-hfead-srch" method="get" name="search" action="http://stores.ebay.com/"+StoreID+"">
+					<input type="hidden" value="1" id="xdescr" name="LH_TitleDesc">
+				 	<input id="xx-head-srch-sbox" onblur="if (this.value == '') this.value = 'Search Our Store...';" onfocus="if (this.value == 'Search Our Store...') this.value = '';" value="Search Our Store..." maxlength="300" name="_nkw"  type="text">
+				 	<input id="xx-head-srch-bttn" name="submit" type="submit" value="&nbsp">
+				</form>
+			-->
+		</div>
+	</div>
+</div>
+<div>
+	<div class="new_stuff awesome three_wrapper">
+		<div class="new_stuff tthree_block three_nav">
+			<div id="stuff_wrapper">
+				<div class="stuff_wrap">
+					<ul class="nav slide">
+
+
+
+						<li>
+							<a href="#">HOME</a>
+							<div class="wrapper-column-1 home">
+								<div class="column-1">
+									<!--<h3 class="mega_h3">Complete Bikes</h3>-->
+
+								</div>
+
+						</li>
+
+
+
+						<li>
+							<a href="" ng-if="hctrl.checkUsername()" ng-click="hctrl.accounts()" >ACCOUNT</a>
+							<div class="wrapper-column-5 home">
+
+							</div>
+						</li>
+
+
+
+
+
+
+						<li>
+							<a href="" ng-if="!hctrl.checkUsername()" ng-click="hctrl.registerstate()">REGISTER/LOGIN</a>
+							<div class="wrapper-column-5 home">
+
+							</div>
+						</li>
+
+
+
+
+
+
+						<li>
+							<a href="" ng-if="hctrl.checkUsername()" ng-click="hctrl.logout()">logout</a>
+							<div class="wrapper-column-4 home">
+
+							</div>
+						</li>
+
+						<li>
+							<a href="" ng-if="hctrl.checkUsername()" ng-click="hctrl.about()">TRANSFER BALANCE</a>
+							<div class="wrapper-column-4 home">
+
+							</div>
+						</li>
+						<li>
+							<a href="" ng-click="hctrl.ministate()">Ministatement</a>
+							<div class="wrapper-column-4 home">
+
+							</div>
+						</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+						<!--
+
+                                 <li>
+                                    <a href="#">Tools & Maintanence</a>
+                                    <div class="wrapper-column-3 home">
+                                       <div class="column-3">
+                                          <h3 class="mega_h3">General Tools and Repair Stands</h3>
+                                          <div class="column-1">
+                                             <ol>
+                                                <li><a href="https://www.ebay.com/sch/Tools/177846/m.html?_ssn=365cycles&_sop=12&_dcat=177846&rt=nc&Type=Allen%2520Key%7CSpanner%7CWrenches%2520%252D%2520Hex%7CWrenches%2520%252D%2520Star%7CWrenches%2520%252D%2520Torque">Wrenches and allen keys</a></li>
+                                                <li><a href="https://www.ebay.com/sch/Tools/177846/m.html?_ssn=365cycles&_sop=12&_dcat=177846&rt=nc&Type=Multi%252DTools%7CTake%2520Along%2520Tool%2520Kits%2520%252F%2520Multitools">Multi tools</a></li>
+                                                <li><a href="https://www.ebay.com/sch/Tools/177846/m.html?_ssn=365cycles&_sop=12&_dcat=177846&rt=nc&Type=Shop%2520Tool%2520Kits%7CTake%2520Along%2520Tool%2520Kits%2520%252F%2520Multitools%7CTool%2520Kit">Tool kits</a></li>
+                                             </ol>
+                                          </div>
+                                          <div class="column-1">
+                                             <ol>
+                                                <li><a href="https://www.ebay.com/sch/Tools/177846/m.html?_ssn=365cycles&_sop=12&_dcat=177846&rt=nc&Type=Wrenches%2520%252D%2520Torque">Torque Wrenches</a></li>
+                                                <li><a href="http://www.ebay.com/sch/Bicycle-Workstands/177847/m.html?_ssn=365cycles&_dcat=&_sop=12">Repair Stands & Small Parts</a></li>
+                                                <li><a href="http://www.ebay.com/sch/Other-Bicycle-Maintenance-Tools/177848/m.html?_ssn=365cycles&_dcat=&_sop=12">Shop Supply</a></li>
+                                             </ol>
+                                          </div>
+                                          <h3 class="mega_h3">Component Specific Tools</h3>
+                                          <div class="column-1">
+                                             <ol>
+                                                <li><a href="https://www.ebay.com/sch/Tools/177846/m.html?_ssn=365cycles&_sop=12&_dcat=177846&rt=nc&Type=Chain%2520Tool%7CChain%2520Whip">Chain Tools</a></li>
+                                                <li><a href="https://www.ebay.com/sch/Tools/177846/m.html?_ssn=365cycles&_sop=12&_dcat=177846&rt=nc&Type=Bottom%2520Bracket%2520Tools%7CCrank%2520Extractor">Bottom Bracket & Crank Tools</a></li>
+                                                <li><a href="https://www.ebay.com/sch/Tools/177846/m.html?_ssn=365cycles&_sop=12&_dcat=177846&rt=nc&Type=Fork%2520%2526%2520Suspension%2520Tools">Forks & Suspension Tools</a></li>
+                                                <li><a href="https://www.ebay.com/sch/Tools/177846/m.html?_ssn=365cycles&_sop=12&_dcat=177846&rt=nc&Type=Headset%2520Tools">Headset tools</a></li>
+                                                <li><a href="https://www.ebay.com/sch/Tools/177846/m.html?_ssn=365cycles&_sop=12&_dcat=177846&rt=nc&Type=Spoke%2520Wrench%7CWheel%2520Tools">Wheel & Spoke Tools</a></li>
+                                             </ol>
+                                          </div>
+                                          <div class="column-1">
+                                             <ol>
+                                                <li><a href="https://www.ebay.com/sch/Tools/177846/m.html?_ssn=365cycles&_sop=12&_dcat=177846&rt=nc&Type=Pedal%2520Tools">Pedal Tools</a></li>
+                                                <li><a href="https://www.ebay.com/sch/Tools/177846/m.html?_ssn=365cycles&_sop=12&_dcat=177846&rt=nc&Type=Bleed%2520Kits%2520%2526%2520Brake%2520Tools">Brake Bleed Kits & Tools</a></li>
+                                                <li><a href="https://www.ebay.com/sch/Tools/177846/m.html?_ssn=365cycles&_sop=12&_dcat=177846&rt=nc&Type=Cable%2520Tools">Cable Tools</a></li>
+                                                <li><a href="https://www.ebay.com/sch/Tools/177846/m.html?_ssn=365cycles&_sop=12&_dcat=177846&rt=nc&Type=Drivetrain%2520Tools%7C%21">Drivetrain & Other Tools</a></li>
+                                                <li><a href="http://www.ebay.com/sch/Puncture-Repair-/177845/m.html?_ssn=365cycles&_dcat=&_sop=12">Tubes & Tire Repair</a></li>
+                                             </ol>
+                                          </div>
+                                          <h3 class="mega_h3">Lubes & Cleaners</h3>
+                                          <div class="column-1">
+                                             <ol>
+                                                <li><a href="https://www.ebay.com/sch/Lubrication-Cleaning/123475/m.html?_ssn=365cycles&_sop=12&_dcat=123475&rt=nc&Type=Chain%2520Cleaning%2520Tool%7CCleaner%7CCleaning%2520Kit%7CDegreaser%7C%21">Cleaning Supplies</a></li>
+                                             </ol>
+                                          </div>
+                                          <div class="column-1">
+                                             <ol>
+                                                <li><a href="https://www.ebay.com/sch/Lubrication-Cleaning/123475/m.html?_ssn=365cycles&_sop=12&_dcat=123475&rt=nc&Type=Grease%7CLubricant%7C%21">Lubes & Grease</a></li>
+                                             </ol>
+                                          </div>                  </div>
+                                    </li>
+
+
+
+                        -->
+
+
+
+
+						<!--<li>
+							<a href="" ng-click="hctrl.about()">About us</a>
+							<div class="wrapper-column-3 home">
+
+							</div>
+						</li>-->
+
+
+						<li>
+							<a href="#">Nutrition & Health</a>
+							<div class="m_exception wrapper-column-3 home">
+							</div>
+
+						</li>
+
+
+
+
+
+
+
+
+
+						<li>
+							<a href="#">Shop Deals</a>
+							<div class="m_exception wrapper-column-3 home">
+
+							</div>
+						</li>
+
+
+					</ul>
+
+
+
+
+
+
+
+
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End: section wrapper -->
+
+	<!-- section wrapper -->
+
+</div>
+<div align="center">
+	<br><br>
+	<div ui-view style="display: inline-block;">
+	</div>
+
+	<br><br>
+</div>
+
+
+
+<div id="x-foot-wrap"><div id="x-foot">
+	<!-- foot menu -->
+	<div id="x-foot-subm">
+		<a href="http://stores.ebay.com/"+StoreID+"_W0QQ_fsubZ9947520013">Components</a> &nbsp;|&nbsp;
+		<a href="http://stores.ebay.com/"+StoreID+"_W0QQ_fsubZ9947522013">Accessories</a> &nbsp;|&nbsp;
+		<a href="http://stores.ebay.com/"+StoreID+"_W0QQ_fsubZ9947723013">Groups &amp; Kits</a> &nbsp;|&nbsp;
+		<a href="http://stores.ebay.com/"+StoreID+"_W0QQ_fsubZ9947521013">Apparel</a> &nbsp;|&nbsp;
+		<a href="http://stores.ebay.com/"+StoreID+"_W0QQ_fsubZ9947525013">Nutritionals</a> &nbsp;|&nbsp;
+		<a href="http://stores.ebay.com/"+StoreID+"_W0QQ_fsubZ9947524013">Tools</a> &nbsp;|&nbsp;
+		<a href="http://stores.ebay.com/"+StoreID+"_W0QQ_fsubZ9380968013">Sale</a>
+	</div>
+
+	<!-- foot copyright -->
+	<div id="x-foot-copy">Copyright &copy; "+d.getFullYear()+" <a href="http://stores.ebay.com/365Cycles">365 Cycles</a> &nbsp;|&nbsp; All rights reserved.</div>
+</div></div></div>
+</body>
+
+</HTML>

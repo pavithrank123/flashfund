@@ -1,0 +1,149 @@
+<div ng-controller="Usercontrollers as ctrl" style="display: inline-block">
+    <!--Trigger--><br><br><br><br>
+    <a class="login-trigger" ng-click="ctrl.showbalance()"   data-toggle="modal">VIEW BALANCE</a>
+    <div id="login" ng-if="ctrl.showsendbutton" style="color: #FFFFFF !important;" role="dialog">
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button data-dismiss="modal" class="close">&times;</button>
+                    <h4>BALANCE</h4>
+                    <form>
+                        {{ctrl.balance}}
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        body{
+            height: 100vh;
+            text-align: center;
+        }
+        /*Trigger Button*/
+        .login-trigger {
+            font-weight: bold;
+            color: #fff;
+            background: linear-gradient(to bottom right,white,white);
+            padding: 15px 30px;
+            border-radius: 30px;
+            position: relative;
+            top: 50%;
+        }
+
+        /*Modal*/
+        h4 {
+            font-weight: bold;
+            color: #fff;
+        }
+        .close {
+            color: #fff;
+            transform: scale(1.2)
+        }
+        .modal-content {
+            font-weight: bold;
+            background: linear-gradient(to bottom right,black,white);
+        }
+        .form-control {
+            margin: 1em 0;
+        }
+        .form-control:hover, .form-control:focus {
+            box-shadow: none;
+            border-color: #fff;
+        }
+        .username, .password {
+            border: none;
+            border-radius: 0;
+            box-shadow: none;
+            border-bottom: 2px solid #FFFFFF;
+            padding-left: 0;
+            font-weight: normal;
+            background: transparent;
+        }
+        .form-control::-webkit-input-placeholder {
+            color: #FFFFFF;
+        }
+        .form-control:focus::-webkit-input-placeholder {
+            font-weight: bold;
+            color: #fff;
+        }
+        .login {
+            padding: 6px 20px;
+            border-radius: 20px;
+            background: none;
+            border: 2px solid #FAB87F;
+            color: #FAB87F;
+            font-weight: bold;
+            transition: all .5s;
+            margin-top: 1em;
+        }
+        .login:hover {
+            background: #FAB87F;
+            color: #fff;
+        }body{
+             height: 100vh;
+             text-align: center;
+         }
+        /*Trigger Button*/
+        .login-trigger {
+            font-weight: bold;
+            color: #fff;
+            background: linear-gradient(to bottom right, white, black);
+            padding: 15px 30px;
+            border-radius: 30px;
+            position: relative;
+            top: 50%;
+        }
+
+        /*Modal*/
+        h4 {
+            font-weight: bold;
+            color: #fff;
+        }
+        .close {
+            color: #fff;
+            transform: scale(1.2)
+        }
+        .modal-content {
+            font-weight: bold;
+            background: linear-gradient(to bottom right,black,black);
+        }
+        .form-control {
+            margin: 1em 0;
+        }
+        .form-control:hover, .form-control:focus {
+            box-shadow: none;
+            border-color: #fff;
+        }
+        .username, .password {
+            border: none;
+            border-radius: 0;
+            box-shadow: none;
+            border-bottom: 2px solid #eee;
+            padding-left: 0;
+            font-weight: normal;
+            background: transparent;
+        }
+        .form-control::-webkit-input-placeholder {
+            color: #FFFFFF;
+        }
+        .form-control:focus::-webkit-input-placeholder {
+            font-weight: bold;
+            color: #fff;
+        }
+        .login {
+            padding: 6px 20px;
+            border-radius: 20px;
+            background: none;
+            border: 2px solid #FAB87F;
+            color: #FAB87F;
+            font-weight: bold;
+            transition: all .5s;
+            margin-top: 1em;
+        }
+        .login:hover {
+            background: #FAB87F;
+            color: #fff;
+        }
+    </style>
+</div>
